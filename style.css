@@ -1,0 +1,253 @@
+
+/*========== GERAL ==================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background: hsl(0, 0%, 98%);
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: hsl(0, 0%, 15%);;
+    line-height: 1.8rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+select {
+    border: none;
+}
+
+.col-a {
+    grid-area: A;
+    
+    align-self: center;
+
+    background-image: url(./assets/img/img-back.png);
+    background-position: 4rem 0;
+    background-size: 46.832rem 63.415rem;
+    background-repeat: no-repeat;
+    
+    height: 58.115rem;
+    margin-bottom: 1.2rem;
+    /* margin-right: 3.2rem; */
+}
+
+.col-b {
+    grid-area: B;
+}
+
+
+/*========== MAIN ===================*/
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'A B';
+    width: 100%;
+    max-width: 93.5rem;
+    margin-inline: auto;
+
+    padding-bottom: 3.2rem;
+    margin-top: 3.2rem;
+}
+.container_img-transition {
+    display: flex;
+    margin: 2.7rem 0 0 19.7rem;
+    position: relative;
+
+    width: 26.73rem;
+}
+
+.container_img-transition .img-transition {
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+
+    height: 53.884rem;
+    width: 25rem;
+}
+.main .col-b {
+    margin-top: 1.3rem;
+    max-width: 35rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3.2rem;
+}
+.col-b__container {
+    border: .1rem solid hsl(0, 0%, 86%);
+    border-radius: .1rem;
+    padding-block: 1rem;
+    margin-bottom: 1rem;
+    
+    background-color: hsl(0, 0%, 100%);
+}
+.img-logo {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+.logo {
+    margin-block: 3.6rem 1.2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    margin-inline: 4rem;
+    margin-top: 2.4rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding-block: 0.9rem 0.7rem;
+    padding-left: 0.8rem;
+
+    line-height: 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 0.3rem;
+    border: .1rem solid hsl(0, 0%, 86%);
+    outline: none;
+}
+
+.col-b__container button {
+    background-color: hsla(204, 100%, 48%, 0.3);
+    opacity: 1;
+    border: none;
+    width: 26.8rem;
+    padding-inline: .9rem;
+    padding-block: .5rem;
+    margin-block:.8rem;
+
+    border-radius: .4rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: "Segoe UI";
+    color: hsl(0, 0%, 100%);
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 4rem;
+    margin-block: 1rem 1.8rem;
+    flex-shrink: 0;
+    gap: 1.8rem;
+}
+.line h4 {
+    text-transform: uppercase;
+    color: hsl(0, 0%, 56%);
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+.line .line-left,
+.line .line-right {
+    background-color: hsl(0, 0%, 86%);
+    height: 1px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 4rem;
+    margin-block: .8rem;
+}
+.container button{
+    display: inline-block;
+    color: rgba(var(--d69,0,149,246),1);
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+
+    font-family:"Segoe UI";
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: .5rem .9rem;
+    text-align: center;
+    line-height: 1.8rem;
+}
+
+.container button span:nth-child(1){
+    background-image: url(/assets/img/fb-logo1.png);
+    background-repeat: no-repeat;
+    background-position: -41.4rem -25.9rem;
+
+    height: 1.6rem;
+    width: 1.6rem;
+
+    display: inline-block;
+    margin-right: .8rem;
+
+    position: relative;
+    top: .3rem;
+}
+.container button span:nth-child(2){
+    color: hsl(221, 41%, 37%);;
+}
+._password{
+    color: hsl(209, 100%, 21%);
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-top: 1.2rem;
+    text-align: center;
+}
+
+.container-signup {
+    background-color: hsl(0, 0%, 100%);
+
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: .1rem;
+
+    margin-bottom: 1rem;
+    padding-block: 1rem;
+
+}
+
+.stores-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.stores-container p {
+    color: hsl(0, 0%, 15%);
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin: 1rem 2rem 1rem 2rem;
+    text-align: center;
+}
+
+.stores {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+    gap: .8rem;
+}
+
+.stores a img {
+    height: 4rem;
+    width: 100%;
+}
