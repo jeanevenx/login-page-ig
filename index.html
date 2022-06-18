@@ -3,31 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clone-Instagram Login Form</title>
+    <title>Clone-Instagram Login Page</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <section>
         <main class="main">
             <div class="col-a">
-                <div class="container_img-transition">
+                <div class="image">
                     <img 
-                        class="img-transition" 
+                        id="first"
+                        class="img" 
                         src="./assets/img/img-1.png" 
                         alt=""
                     />
-                    <img 
-                        class="img-transition" 
+                    <img
+                        id="second"
+                        class="img" 
                         src="./assets/img/img-2.png" 
                         alt=""
                     />
                     <img 
-                        class="img-transition" 
+                        id="third"
+                        class="img" 
                         src="./assets/img/img-3.png" 
                         alt=""
                     />
-                    <img 
-                        class="img-transition" 
+                    <img
+                        id="fourth"
+                        class="img" 
                         src="./assets/img/img-4.png" 
                         alt=""
                     />
@@ -35,33 +39,82 @@
                 </div>
             </div>
             <div class="col-b">
-                <div class="col-b__container">
+                <div class="col-b__form-container">
                     <div class="logo">
-                        <img class="img-logo" src="./assets/img/instagram.png" alt="Instagram">
+                        <div 
+                            aria-disabled="false" 
+                            role="button" 
+                            style="cursor: pointer;" 
+                            tabindex="0"
+                        >
+                            <img class="img-logo" src="./assets/img/instagram.png" alt="Instagram">
+                        </div>
                     </div>
-                    <form action="" method="post">
-                        <input type="text" name="user" placeholder="Phone Number, username, or email" maxlength="75"/>
-                        <input type="password" placeholder="Password"/>
+                    <form>
+                        <div class="form-element">
+                            <div class="input-wrapper">
+                                <div class="input-border">
+                                    <label class="input-label">
+                                        <span class="input-hint">Phone number, username, or email</span>
+                                        <input 
+                                            class="input-credentials" 
+                                            type="text"
+                                            aria-label="Phone number, username, or email" 
+                                            aria-required="true" autocapitalize="none" 
+                                            autocorrect="off" 
+                                            maxlength="75" 
+                                            name="username" 
+                                        />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-wrapper">
+                                <div class="input-border">
+                                    <label class="input-label">
+                                        <span class="input-hint">Password</span>
+                                        <input 
+                                            class="input-credentials" 
+                                            type="password"
+                                            aria-label="Password" aria-required="true" autocapitalize="none" 
+                                            autocorrect="off" 
+                                            name="password"
+                                        />
+                                    </label>
+                                    <div class="show-pwd-wrapper">
+                                        <div class="show-pwd-item">
+                                            <input 
+                                                class="show-pwd-btn" 
+                                                type="button"
+                                                value="Hide"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="submit-btn">
+                                <input type="submit" value="Log In">
+                            </div>
+                            <div class="line">
+                                <div class="line-left"></div>
+                                <h4>or</h4>
+                                <div class="line-right"></div>
+                            </div>
+                            <div class="login-btn-wrapper">
+                                <button>
+                                    <span></span>
+                                    <span >Log in with Facebook</span>
+                                </button>
+                            </div>
+
+                        </div>
+                        <a class="_password" href="#" tabindex="0">Forgot password?</a>
                     </form>
-                    <button>Log In</button>
-                    <div class="line">
-                        <div class="line-left"></div>
-                        <h4>or</h4>
-                        <div class="line-right"></div>
-                    </div>
-                    <div class="container">
-                        <button>
-                            <span></span>
-                            <span >Log in with Facebook</span>
-                        </button>
-                    </div>
-                    <a class="_password" href="#" tabindex="0">Forgot password?</a>
                 </div>
                 <div class="container-signup">
                     <div class="signup">
                         <p>
                             Don't have an account?
-                            <a href="./signup.html">Sign up</a>
+                            <a href="#">Sign up</a>
                         </p>
                         
                     </div>
@@ -77,13 +130,6 @@
         </main>
     
         <footer>
-            <ul>
-                <li><a href="#">Meta</a></li>
-            </ul>
-            <select name="" id="">
-                <option value="English">English</option>
-            </select>
-            <p>&copy2022 Instagram from Meta</p>
         </footer>
     </section>
  <script src="./app.js"></script>  
