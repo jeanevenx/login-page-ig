@@ -396,20 +396,21 @@ input[type="submit"] {
 
 /* ================ MOBILE =================== */
 
-@media (min-width: 875px) {
+@media (max-width: 875px) {
+    section {
+        margin-top: 8.65rem;
+
+    }
     .main {
-        display: inital;
+        display: initial;
         margin: initial;
         padding: initial;
-        width: initial;
     }
     .col-a {
-        display: inital;
+        display: none;
     }
 
-    .main div.col-b{
-        margin-top: 1.3rem;
+    .main .col-b{
         margin-inline: auto;
-        justify-content: center;
     }
 }

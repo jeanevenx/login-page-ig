@@ -2,19 +2,22 @@ let imageIndex = 0;
 const imageId = [first, second, third, fourth];
 
 
-setInterval(() => {
+
+const transitionInterval = setInterval(() => {
     imageId[2].classList.remove('hide-img');
     makeImageTransition(imageId[imageIndex]);
-
+    
     imageIndex++;
-
+    
     if(imageIndex > 3) {
         imageIndex = 0;
     } 
-
+    
 }, 5000);
+const columnA = document.querySelector('.col-a');
+const width = window.getComputedStyle(columnA).width;
 
-
+width === 'auto' ? clearInterval(transitionInterval) : transitionInterval;
 
 
 imageId[imageIndex].classList.add('show-img');
