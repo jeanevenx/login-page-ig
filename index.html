@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clone - Instagram Login Page</title>
+    <title>Clone - IG Login Page</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -56,7 +56,8 @@
                                 <div class="input-border">
                                     <label class="input-label">
                                         <span class="input-hint">Phone number, username, or email</span>
-                                        <input 
+                                        <input
+                                            id="inputText"
                                             class="input-credentials" 
                                             type="text"
                                             aria-label="Phone number, username, or email" 
@@ -71,8 +72,14 @@
                             <div class="input-wrapper">
                                 <div class="input-border">
                                     <label class="input-label">
-                                        <span class="input-hint">Password</span>
+                                        <span 
+                                        class="input-hint"
+                                        id="hintPwd"
+                                        >
+                                            Password
+                                        </span>
                                         <input 
+                                            id="pwd"
                                             class="input-credentials" 
                                             type="password"
                                             aria-label="Password" aria-required="true" autocapitalize="none" 
@@ -91,7 +98,7 @@
                                 </div>
                             </div>
                             <div class="submit-btn">
-                                <input type="submit" value="Log In">
+                                <input class="btn-login" type="submit" value="Log In">
                             </div>
                             <div class="line">
                                 <div class="line-left"></div>
@@ -127,7 +134,6 @@
                 </div>
             </div>
         </main>
-    
         <footer>
         </footer>
     </section>
