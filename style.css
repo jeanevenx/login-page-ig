@@ -393,6 +393,13 @@ form .form-element{
     width: 100%;
 }
 
+.disclaimer{
+    padding: 1.5rem;
+}
+
+.disclaimer span {
+    color: red;
+}
 /* ================ MOBILE =================== */
 
 @media (max-width: 875px) {
