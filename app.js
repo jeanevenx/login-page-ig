@@ -11,58 +11,32 @@ pwd.addEventListener('beforeinput',displayShowBtn);
 showPwd.addEventListener('click',showAndHidePwd);
 reloaded();
 
+const imageId = [
+    document.querySelector('#first'), 
+    document.querySelector('#second'), 
+    document.querySelector('#third'), 
+    document.querySelector('#fourth')
+];
 
 let imageIndex = 0;
-const imageId = [first, second, third, fourth];
-
-const transitionInterval = setInterval(() => {
-    imageId[2].classList.remove('hide-img');
-    makeImageTransition(imageId[imageIndex]);
-    
-    imageIndex++;
-    
-    if(imageIndex > 3) {
-        imageIndex = 0;
-    } 
-    
-}, 5000);
-const columnA = document.querySelector('.col-a');
-const width = window.getComputedStyle(columnA).width;
-
-width === 'auto' ? clearInterval(transitionInterval) : transitionInterval;
-
-
 imageId[imageIndex].classList.add('show-img');
 
-function makeImageTransition(imageElement){
+// const columnA = document.querySelector('.col-a');
+// const width = window.getComputedStyle(columnA).width;
 
-    switch(imageElement){
-        case first:
-            imageId[3].classList.add('hide-img');
-            imageId[3].classList.remove('show-img');
-            imageElement.classList.add('show-img');
-        break;
-        case second:
-            imageId[0].classList.remove('show-img');
-            imageId[0].classList.add('hide-img');
-            imageId[3].classList.remove('hide-img');
-            imageElement.classList.add('show-img');
-        break;
-        case third:
-            imageId[1].classList.remove('show-img');
-            imageId[1].classList.add('hide-img');
-            imageId[0].classList.remove('hide-img');
-            imageElement.classList.add('show-img');
-        break;
-        case fourth:
-            imageId[2].classList.remove('show-img');
-            imageId[2].classList.add('hide-img');
-            imageId[1].classList.remove('hide-img');
-            imageElement.classList.add('show-img');
-        break;
+setInterval(() => {
+  imageId.forEach((image) => {
+    image.classList.remove('show-img');
+    image.classList.add('hide-img');
+  });
 
-        }
-}
+  imageId[imageIndex].classList.remove('hide-img');
+  imageId[imageIndex].classList.add('show-img');
+
+  imageIndex = (imageIndex + 1) % imageId.length;
+}, 5000);
+
+
 
 function showHintOfInputTxt(event){
     const hint = document.querySelector('.input-hint');
